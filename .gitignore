@@ -1,0 +1,33 @@
+# Virtual environments
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# ML / Data (IMPORTANT)
+# ----------------------
+
+# Datasets
+datasets/
+
+# Trained models
+models/
+*.pkl
+*.joblib
+
+# Temporary files
+*.csv~

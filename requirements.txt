@@ -1,0 +1,46 @@
+# Requirements for ML-Based Fintech Assistant
+# NO external LLM dependencies (Cohere, OpenAI removed)
+
+# Core Framework
+fastapi>=0.110.0
+uvicorn[standard]==0.24.0
+pydantic>=2.7.2
+pydantic-settings>=2.6.1
+python-dotenv==1.0.0
+requests>=2.31.0
+
+# MCP (Model Context Protocol)
+mcp==1.1.2
+fastmcp==0.2.0
+
+# ML & NLP (for local intent classification)
+scikit-learn==1.3.2
+numpy==1.26.2
+scipy==1.11.4
+
+# Text Processing
+nltk==3.8.1
+
+# Data Processing
+pandas==2.1.3
+
+# HTTP Client (for bank backend API calls in data_server.py)
+httpx>=0.27.0
+
+# ── Agent system (NEW) ────────────────────────────────────────────────
+# PostgreSQL async driver — required for user_storage.py persistence
+asyncpg>=0.29.0
+
+# Redis client — optional, only needed when USE_REDIS=true in .env
+# Provides distributed session memory for multi-worker deployments
+redis>=5.0.0
+
+# Logging
+loguru==0.7.2
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Security
+cryptography==41.0.7
